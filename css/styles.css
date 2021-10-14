@@ -406,14 +406,51 @@ img {
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.2;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 20px;
 
-  color: #ffffff;
+  color: var(--white-color);
+}
+.footer-subscribe-form {
+  display: flex;
+  flex-direction: row;
+}
+.footer-input {
+  font-size: 16px;
+  line-height: 1.3;
+  width: 358px;
+  height: 50px;
+  text-align: left;
+  padding-left: 16px;
+  border: 1px solid var(--footer-border-color);
+  border-radius: 4px;
+  margin-right: 12px;
+  color: var(--footer-white-color);
+  background-color: transparent;
+}
+.footer-botton {
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--white-color);
+  background-color: var(--accent-color);
+
+  display: flex;
+  padding-left: 29px;
+  justify-content: left;
+  align-items: center;
+  border: 4px solid red;
+  border-radius: 50%;
+  box-shadow: 0px 4px 4px var(--footer-botton-shadow);
 }
 
+.footer-botton-text {
+  margin-right: 10px;
+}
 /*----------Позиционирование модального окна---------*/
 .backdrop {
   position: fixed;
@@ -471,6 +508,10 @@ img {
   fill: var(--nav-text-color);
 }
 
+.test {
+  background-color: grey;
+}
+
 :root {
   --accent-color: #2196f3;
   --project-accent-color: #2196f3e6;
@@ -488,6 +529,8 @@ img {
   --bg-footer-icon-color: #ffffff19;
   --bg-modal-overlay-color: #00000033;
   --close-border-color: #0000001a;
+  --footer-border-color: #ffffff4d;
+  --footer-botton-shadow: #ffffff26;
 }
 
 body {
