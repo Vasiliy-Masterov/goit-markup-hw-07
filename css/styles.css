@@ -365,6 +365,9 @@ img {
   margin-right: 70px;
 }
 
+.footer-item:last-child {
+  margin-left: auto;
+}
 .footer-social-list {
   display: flex;
 }
@@ -443,6 +446,7 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
+  letter-spacing: 0.06em;
   color: var(--white-color);
   background-color: var(--accent-color);
   display: flex;
@@ -452,10 +456,12 @@ img {
   border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-botton:hover,
 .footer-botton:focus {
   cursor: pointer;
+  background-color: #188ce8;
 }
 
 .footer-botton-text {
@@ -469,6 +475,8 @@ img {
   top: 0;
   left: 0;
   background-color: var(--bg-modal-overlay-color);
+  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -486,6 +494,7 @@ img {
   position: absolute;
   width: 528px;
   min-height: 581px;
+  padding: 40px 39px 40px 41px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -510,16 +519,24 @@ img {
   border-radius: 50%;
   border-width: 1px;
   border-color: var(--close-border-color);
+  outline: none;
+}
+.close-button:hover,
+.close-button:focus {
+  cursor: pointer;
 }
 
+.close-button:hover .close-icon,
+.close-button:focus .close-icon {
+  fill: var(--accent-color);
+}
 .close-icon {
   width: 18px;
   height: 18px;
   fill: var(--nav-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-form {
-  padding: 40px 39px 40px 41px;
-}
+
 .modal-title {
   font-size: 20px;
   font-weight: 700;
@@ -541,9 +558,9 @@ img {
 }
 .modal-input-icon {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 12px;
-  transform: translateY(-50%);
+  transform: translateY(50%);
   width: 18px;
   height: 18px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -561,11 +578,12 @@ img {
 .modal-input:hover + .modal-input-icon,
 .modal-input:focus + .modal-input-icon {
   fill: var(--accent-color);
-  border-color: var(--accent-color);
   cursor: pointer;
 }
 .modal-input:hover,
-.modal-input:focus {
+.modal-input:focus,
+.modal-comment:hover,
+.modal-comment:focus {
   border-color: var(--accent-color);
   cursor: pointer;
 }
@@ -580,6 +598,7 @@ img {
   border-radius: 4px;
   margin-bottom: 20px;
   outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-comment::placeholder {
   font-size: 12px;
@@ -591,15 +610,12 @@ img {
   padding-left: 12px;
   line-height: 1.7;
 }
-.modal-checkbox-item:checked + .checkbox-lable span {
-  background-color: var(--accent-color);
-  border: none;
-}
 
 .checkbox-lable {
   display: flex;
   align-items: center;
 }
+
 .checkbox-lable span {
   display: flex;
   justify-content: center;
@@ -610,6 +626,24 @@ img {
   border-radius: 2px;
   margin-right: 7px;
 }
+.checkbox-square {
+  display: block;
+  border-color: var(--title-dark-gray-color);
+}
+.modal-checkbox-item:checked + .checkbox-lable span {
+  background-color: var(--accent-color);
+  border: none;
+}
+.checkbox-square:hover,
+.checkbox-square:focus {
+  border-color: var(--accent-color);
+  cursor: pointer;
+}
+.modal-checkbox:hover,
+.modal-checkbox:focus {
+  cursor: pointer;
+}
+
 .modal-send-button {
   display: block;
   width: 200px;
@@ -618,14 +652,17 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
+  letter-spacing: 0.06em;
   color: var(--white-color);
   background-color: var(--accent-color);
   border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
 }
-.modal-send-button:hover {
+.modal-send-button:hover,
+.modal-send-button:focus {
   cursor: pointer;
   background-color: #188ce8;
 }
@@ -769,8 +806,13 @@ body {
   border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.hero-button:hover,
+.hero-button:focus {
+  cursor: pointer;
+  background-color: #188ce8;
+}
 /*-----------особенности--------------*/
 
 .feature-item-title {
