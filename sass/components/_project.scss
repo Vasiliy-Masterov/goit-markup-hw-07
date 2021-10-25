@@ -31,8 +31,8 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-list__link:hover .project-overlay,
-.project-list__link:focus .project-overlay {
+.project-list__link:hover .project-list__overlay,
+.project-list__link:focus .project-list__overlay {
   transform: translateY(-100%);
 }
 
