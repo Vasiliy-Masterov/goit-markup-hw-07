@@ -1,5 +1,13 @@
-@import './base';
-@import './header';
 @import './utils/variables';
+@import './components/base';
+@import './components/header';
+@import './components/hero';
+@import './components/occupation';
+@import './components/feature';
+@import './components/team';
+@import './components/clients';
 @import './components/filter';
 @import './components/project';
+@import './components/footer';
+@import './components/backdrop';
+@import './components/modal';
